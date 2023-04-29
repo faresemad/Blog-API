@@ -30,16 +30,14 @@ on:
   push:
     branches: [ "main" ]
 
-env:
-  AWS_REGION: af-south-1                      # set this to your preferred AWS region, e.g. us-west-1
-  ECR_REPOSITORY: blogapi           # set this to your Amazon ECR repository name
-  ECS_SERVICE: githubblogapi                 # set this to your Amazon ECS service name
-  ECS_CLUSTER: Mycluster                 # set this to your Amazon ECS cluster name
-  ECS_TASK_DEFINITION: githubblogapi/image # set this to the path to your Amazon ECS task definition
-                                               # file, e.g. .aws/task-definition.json
-  CONTAINER_NAME: myblogapi           # set this to the name of the container in the
-                                               # containerDefinitions section of your task definition
 
+env:
+  AWS_REGION: 'af-south-1'
+  ECR_REPOSITORY: 'blogapi'
+  ECS_SERVICE: 'githubblogapi'
+  ECS_CLUSTER: 'Mycluster'
+  ECS_TASK_DEFINITION: 'githubblogapi/image'
+  CONTAINER_NAME: 'myblogapi'
 permissions:
   contents: read
 
